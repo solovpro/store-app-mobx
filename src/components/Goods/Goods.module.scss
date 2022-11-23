@@ -1,0 +1,87 @@
+.product {
+  display: flex;
+  flex-flow: column;
+  margin: 20px;
+
+  .inOrder {
+    width: 300px;
+    .productImg {
+      width: 300px;
+    }
+  }
+
+  .inProductsPanel {
+    width: 200px;
+    .productImg {
+      width: 200px;
+    }
+  }
+
+  &Img {
+    width: 250px;
+    margin: 0 0 5px 0;
+    border-radius: 10px;
+  }
+
+  &Info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Actor', serif;
+    margin: 0 0 10px 0;
+  }
+
+  &Button {
+    width: 100%;
+    height: 30px;
+    background-color: #FFF;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid #3021E5;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &Edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__Delete {
+      cursor: pointer;
+    }
+
+    &__Count {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 69px;
+      height: 30px;
+      border-radius: 10px;
+      border: 1px solid #FC0B37;
+      &Sign {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        font-size: 25px;
+        cursor: pointer;
+        color: #555;
+        button {
+          cursor: pointer;
+          font-size: 20px;
+        }
+      }
+
+      &Separation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1px;
+        height: 25px;
+        background-color: #555;
+      }
+    }
+  }
+}

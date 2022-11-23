@@ -1,3 +1,5 @@
-.App {
-  text-align: center;
+.app {
+  &Content {
+    margin: 40px 0 0 0;
+  }
 }
