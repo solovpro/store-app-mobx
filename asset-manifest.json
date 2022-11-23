@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.fa580e76.css",
-    "main.js": "/static/js/main.6069811b.js",
+    "main.css": "/static/css/main.8dbc1b60.css",
+    "main.js": "/static/js/main.fd3b9cf2.js",
+    "static/media/steak-house.png": "/static/media/steak-house.b92cc1e22a9f4e3c0200.png",
+    "static/media/AbhayaLibre-SemiBold.ttf": "/static/media/AbhayaLibre-SemiBold.48aaef083d682d8f28e1.ttf",
+    "static/media/Actor-Regular.ttf": "/static/media/Actor-Regular.15d692218d9ada8ff090.ttf",
+    "static/media/delete.png": "/static/media/delete.32b5b224f7087e8baba5.png",
+    "static/media/icon-app.png": "/static/media/icon-app.6ceec88f16a855799537.png",
     "index.html": "/index.html",
-    "main.fa580e76.css.map": "/static/css/main.fa580e76.css.map",
-    "main.6069811b.js.map": "/static/js/main.6069811b.js.map"
+    "main.8dbc1b60.css.map": "/static/css/main.8dbc1b60.css.map",
+    "main.fd3b9cf2.js.map": "/static/js/main.fd3b9cf2.js.map"
   },
   "entrypoints": [
-    "static/css/main.fa580e76.css",
-    "static/js/main.6069811b.js"
+    "static/css/main.8dbc1b60.css",
+    "static/js/main.fd3b9cf2.js"
   ]
 }
