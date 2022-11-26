@@ -1,8 +1,9 @@
 .order {
   display: flex;
+  z-index: 1;
 
   &Block {
-    margin: 10px 20px;
+    margin: 0 20px;
 
     &__Header {
       display: flex;
@@ -10,6 +11,7 @@
       align-items: center;
       font-size: 40px;
       margin: 10px 0 0 0;
+      color: #333;
     }
   }
 
@@ -22,7 +24,21 @@
     justify-content: center;
     align-items: center;
     flex-flow: wrap;
-    margin: 30px 0 0 0;
+    margin: 20px 0 0 0;
+    &__Result {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      font-size: 30px;
+      padding: 20px 0 0 20px;
+      color: #333;
+    }
+    &__NotSelected {
+      font-size: 25px;
+      color: #FC0B37;
+      margin: 50px 0 0 0;
+    }
   }
 
   &Selected {

@@ -1,0 +1,66 @@
+.received {
+  position: absolute;
+  z-index: 5;
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .6;
+    animation-name: appearanceContainer;
+    animation-duration: 3s;
+    z-index: 3;
+  }
+  &Content {
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    position: absolute;
+    width: 400px;
+    height: 150px;
+    border-radius: 25px;
+    top: 300px;
+    animation-name: appearanceContent;
+    animation-duration: 0.8s;
+    border: 3px solid #000;
+    font-size: 25px;
+    left: 510px;
+    color: #FFF;
+    background-color: #555;
+    &_Image {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes appearanceContent {
+  0% {
+    opacity: 0;
+    margin: -300px 0 0 0;
+  }
+  100% {
+    opacity: 1;
+    margin: 0 0 0 0;
+  }
+}
+
+@keyframes appearanceContainer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: .6;
+  }
+}
