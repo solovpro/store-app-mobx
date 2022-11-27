@@ -2,17 +2,24 @@
 
 # Store app
 
+[![Header](https://github.com/solovpro/todo-list/raw/master/src/assets/img/app-readme-dark.png)](https://solovpro.github.io/store-app/)
+[![Header](https://github.com/solovpro/todo-list/raw/master/src/assets/img/app-readme-light.png)](https://solovpro.github.io/store-app/)
+
 [//]: # (### Store app)
 <div align="start">
 
 [//]: # (```sh)
 
+[//]: # ()
 [//]: # ($ css-animation)
 
+[//]: # ()
 [//]: # ($ сменой темы)
 
+[//]: # ()
 [//]: # ($ и другими интересными функционалами)
 
+[//]: # ()
 [//]: # (```)
 
 </div>
