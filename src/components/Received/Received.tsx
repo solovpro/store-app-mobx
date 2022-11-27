@@ -1,23 +1,22 @@
 import React from 'react';
-
-import close from '../../assets/img/close.png';
+import { Link } from 'react-router-dom';
 
 import s from './Received.module.scss';
 
 interface ReceivedProps {
-   setIsReceived: React.Dispatch<React.SetStateAction<boolean>>;
+   clearCart: () => void;
 }
 
-const Received: React.FC<ReceivedProps> = ({ setIsReceived }) => {
-   const onClick = () => {
-      setIsReceived(false);
-   };
+// Окно об успешном заказе
+const Received: React.FC<ReceivedProps> = ({ clearCart }) => {
    return (
       <div className={s.received}>
-         <div className={s.container} onClick={onClick} />
+         <div className={s.container} />
          <div className={s.receivedContent}>
-            <img className={s.receivedContent_Image} onClick={onClick} src={close} width='20px' height='20px' alt='' />
             <div>Заказ принят!</div>
+            <Link to='/' onClick={clearCart}>
+               <div className={s.receivedContent__Button}>Ok</div>
+            </Link>
          </div>
       </div>
    );

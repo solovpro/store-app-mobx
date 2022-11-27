@@ -85,7 +85,7 @@ const Goods: React.FC<ProductProps> = ({ setDataContainer, calculateSum, product
             </>
          )}
          {location === 'inProductsPanel' ? (
-            <button className={s.productButton} type='button' onClick={onClickAdd}>
+            <button disabled={product.selected} className={s.productButton} type='button' onClick={onClickAdd}>
                +
             </button>
          ) : (
@@ -100,6 +100,7 @@ const Goods: React.FC<ProductProps> = ({ setDataContainer, calculateSum, product
                <div
                   className={cn({
                      [s.productEdit__InCart]: location === 'inCart',
+                     [s.productEdit_InOrder]: location === 'inOrder',
                   })}
                >
                   <button className={s.productEdit__Delete} onClick={onClickDelete}>

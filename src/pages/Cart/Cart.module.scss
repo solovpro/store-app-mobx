@@ -9,6 +9,10 @@
     font-size: 40px;
     margin: 0 auto;
     width: 400px;
+    color: #019Aff;
+    @media (max-width: 425px) {
+      width: 200px;
+    }
   }
   &NotSelected {
     display: flex;
@@ -18,38 +22,76 @@
     color: #FC0B37;
     margin: 50px 0 0 0;
   }
-  &Result {
+  &Buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    margin: 20px auto;
+    width: 100%;
+    margin: 20px 0;
     font-size: 30px;
     color: #333;
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
+    &__Result {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      margin: 50px 0 0 0;
+      &Sum {
+        margin: 20px 0 0 20px;
+      }
+    }
+    &__Clear {
+      background: #555;
+      min-width: 250px;
+      &:hover {
+        transition: all 0.4s ease;
+        opacity: .6;
+      }
+    }
+    &__Order {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #019Aff;
+      min-width: 250px;
+      &:hover {
+        transition: all 0.4s ease;
+        box-shadow: 0 0 0 rgba(1, 154, 255, 0.4);
+        animation: pulse 2s infinite;
+      }
+    }
   }
   &Button {
     border-radius: 30px;
     width: 400px;
     height: 70px;
     margin: 20px 0 0;
-    color: #555;
+    color: #FFF;
     font-size: 22px;
-    border: 3px solid #555;
     cursor: pointer;
     transition: all 0.2s ease;
-    display: block;
-    background: #FFFFFF;
-    &:hover {
-      transition: all 0.4s ease;
-      box-shadow: 0 0 0 rgba(48, 33, 229, 0.4);
-      animation: pulse 2s infinite;
+    @media (max-width: 425px) {
+      width: 250px;
+      height: 60px;
     }
+  }
+  @media (max-width: 768px) {
+    margin: 0 15px;
+  }
+  @media (max-width: 425px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @-webkit-keyframes pulse {
   0% {
-    -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+    -webkit-box-shadow: 0 0 0 0 rgba(1, 154, 255, 0.4);
   }
   70% {
     -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
@@ -61,8 +103,8 @@
 
 @keyframes pulse {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(48, 33, 229, 0.4);
-    box-shadow: 0 0 0 0 rgba(48, 33, 229, 0.4);
+    -moz-box-shadow: 0 0 0 0 rgba(1, 154, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(1, 154, 255, 0.4);
   }
   70% {
     -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);

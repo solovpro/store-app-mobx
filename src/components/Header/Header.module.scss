@@ -8,7 +8,7 @@
   background-color: #FFF;
   animation-name: appearance;
   animation-duration: 0.8s;
-  z-index: 4;
+  z-index: 12;
 
   .headerContainer {
     display: flex;
@@ -16,6 +16,12 @@
     align-items: center;
     width: 100%;
     padding: 0 80px;
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+    @media (max-width: 375px) {
+      padding: 0 5px;
+    }
   }
 
   &Content {
@@ -30,7 +36,7 @@
       align-items: center;
       width: 45px;
       height: 45px;
-      border: 1px solid #7DB4DF;
+      border: 1px solid #019Aff;
       border-radius: 50%;
       transition: all 0.2s ease;
       &:hover {
@@ -42,11 +48,17 @@
     &__Name {
       font-size: 25px;
       transition: all 0.2s ease;
-      color: #7DB4DF;
+      color: #019Aff;
       &:hover {
         opacity: .6;
         transition: all 0.4s ease;
       }
+      @media (max-width: 375px) {
+        font-size: 20px;
+      }
+    }
+    @media (max-width: 375px) {
+      width: 130px;
     }
   }
 
@@ -56,8 +68,11 @@
     align-items: center;
     width: 259px;
     height: 40px;
-    border: 1px solid #7DB4DF;
+    border: 1px solid #019Aff;
     border-radius: 10px;
+    @media (max-width: 768px) {
+      width: 109px;
+    }
 
     &:hover {
       opacity: .6;
@@ -79,6 +94,9 @@
       width: 259px;
       cursor: pointer;
       transition: all 0.2s ease;
+      @media (max-width: 768px) {
+        width: 109px;
+      }
 
       &Image {
         display: flex;
@@ -90,7 +108,7 @@
       &Separation {
         width: 1px;
         height: 35px;
-        background-color: #7DB4DF;
+        background-color: #019Aff;
       }
 
       &Count {
@@ -99,6 +117,14 @@
         align-items: center;
         width: 204px;
         font-size: 19px;
+        @media (max-width: 768px) {
+          width: 54px;
+        }
+        &_Text {
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
         &_Number {
           margin: 0 0 0 10px;
         }

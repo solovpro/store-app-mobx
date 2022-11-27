@@ -1,6 +1,8 @@
 .received {
-  position: absolute;
+  display: flex;
+  align-items: center;
   z-index: 5;
+  width: 100%;
   .container {
     display: flex;
     width: 100%;
@@ -22,24 +24,45 @@
     flex-flow: column;
     position: absolute;
     width: 400px;
-    height: 150px;
+    height: 250px;
     border-radius: 25px;
     top: 300px;
+    left: 50%;
+    transform:translate(-50%, -50%);
     animation-name: appearanceContent;
     animation-duration: 0.8s;
-    border: 3px solid #000;
-    font-size: 25px;
-    left: 510px;
-    color: #FFF;
-    background-color: #555;
-    &_Image {
+    border: 3px solid #555;
+    font-size: 29px;
+    color: #019Aff;
+    background-color: #E6E6E6;
+    @media (max-width: 768px) {
+      width: 250px;
+      height: 150px;
+      font-size: 25px;
+    }
+    @media (max-width: 400px) {
+      top: 45%;
+    }
+    &__Button {
       display: flex;
-      position: absolute;
-      top: 20px;
-      right: 20px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      width: 300px;
+      height: 70px;
+      margin: 20px 0 0;
+      color: #FFF;
+      font-size: 25px;
       cursor: pointer;
-      img {
-        cursor: pointer;
+      transition: all 0.2s ease;
+      background: #019Aff;
+      &:hover {
+        transition: all 0.4s ease;
+        opacity: .6;
+      }
+      @media (max-width: 768px) {
+        width: 200px;
+        height: 50px;
       }
     }
   }

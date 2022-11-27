@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ calculateSelected }) => {
                   </div>
                   <div className={s.headerInfo__CartSeparation} />
                   <div className={s.headerInfo__CartCount}>
-                     <div>Выбранные товары:</div>
+                     <div className={s.headerInfo__CartCount_Text}>Выбранные товары:</div>
                      <div className={s.headerInfo__CartCount_Number}>{calculateSelected()}</div>
                   </div>
                </div>

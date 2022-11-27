@@ -27,7 +27,7 @@ const App: React.FC = () => {
       {
          id: 1,
          img: product1,
-         name: 'товар1',
+         name: 'Товар1',
          price: '50',
          selected: false,
          amount: 0,
@@ -36,7 +36,7 @@ const App: React.FC = () => {
       {
          id: 2,
          img: product2,
-         name: 'товар2',
+         name: 'Товар2',
          price: '100',
          selected: false,
          amount: 0,
@@ -45,7 +45,7 @@ const App: React.FC = () => {
       {
          id: 3,
          img: product3,
-         name: 'товар3',
+         name: 'Товар3',
          price: '150',
          selected: false,
          amount: 0,
@@ -54,7 +54,7 @@ const App: React.FC = () => {
       {
          id: 4,
          img: product4,
-         name: 'товар4',
+         name: 'Товар4',
          price: '200',
          selected: false,
          amount: 0,
@@ -63,7 +63,7 @@ const App: React.FC = () => {
       {
          id: 5,
          img: product5,
-         name: 'товар5',
+         name: 'Товар5',
          price: '250',
          selected: false,
          amount: 0,
@@ -72,7 +72,7 @@ const App: React.FC = () => {
       {
          id: 6,
          img: product6,
-         name: 'товар6',
+         name: 'Товар6',
          price: '300',
          selected: false,
          amount: 0,
@@ -81,7 +81,7 @@ const App: React.FC = () => {
       {
          id: 7,
          img: product7,
-         name: 'товар7',
+         name: 'Товар7',
          price: '350',
          selected: false,
          amount: 0,
@@ -90,7 +90,7 @@ const App: React.FC = () => {
       {
          id: 8,
          img: product8,
-         name: 'товар8',
+         name: 'Товар8',
          price: '400',
          selected: false,
          amount: 0,
@@ -99,7 +99,7 @@ const App: React.FC = () => {
       {
          id: 9,
          img: product9,
-         name: 'товар9',
+         name: 'Товар9',
          price: '450',
          selected: false,
          amount: 0,
@@ -108,7 +108,7 @@ const App: React.FC = () => {
       {
          id: 10,
          img: product10,
-         name: 'товар10',
+         name: 'Товар10',
          price: '500',
          selected: false,
          amount: 0,
@@ -160,11 +160,23 @@ const App: React.FC = () => {
       return isSelected;
    };
 
+   // Очистить корзину
+   const clearCart = () => {
+      let dataArr = data;
+      dataArr.forEach(dataEl => {
+         dataEl.amount = 0;
+         dataEl.selected = false;
+         dataEl.sum = 0;
+      });
+      setData([...dataArr]);
+      setIsReceived(false);
+   };
+
    return (
       <main className={s.app}>
          <BrowserRouter>
             <Header calculateSelected={calculateSelected} />
-            {isReceived && <Received setIsReceived={setIsReceived} />}
+            {isReceived && <Received clearCart={clearCart} />}
             <div className={s.appContent}>
                <Routes>
                   <Route
@@ -188,6 +200,7 @@ const App: React.FC = () => {
                            calculateSum={calculateSum}
                            setIsReceived={setIsReceived}
                            isReceived={isReceived}
+                           clearCart={clearCart}
                            data={data}
                            sum={sum}
                         />
