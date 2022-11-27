@@ -2,8 +2,8 @@
 
 # Store app
 
-[![Header](https://github.com/solovpro/todo-list/raw/master/src/assets/img/app-readme-dark.png)](https://solovpro.github.io/store-app/)
-[![Header](https://github.com/solovpro/todo-list/raw/master/src/assets/img/app-readme-light.png)](https://solovpro.github.io/store-app/)
+[![Header](https://github.com/solovpro/store-app/raw/master/src/assets/img/app-image-1.png)](https://solovpro.github.io/store-app/)
+[![Header](https://github.com/solovpro/store-app/raw/master/src/assets/img/app-image-2.png)](https://solovpro.github.io/store-app/)
 
 [//]: # (### Store app)
 <div align="start">
