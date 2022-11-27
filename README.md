@@ -5,25 +5,6 @@
 [![Header](https://github.com/solovpro/store-app/raw/master/src/assets/img/app-image-1.png)](https://solovpro.github.io/store-app/)
 [![Header](https://github.com/solovpro/store-app/raw/master/src/assets/img/app-image-2.png)](https://solovpro.github.io/store-app/)
 
-[//]: # (### Store app)
-<div align="start">
-
-[//]: # (```sh)
-
-[//]: # ()
-[//]: # ($ css-animation)
-
-[//]: # ()
-[//]: # ($ сменой темы)
-
-[//]: # ()
-[//]: # ($ и другими интересными функционалами)
-
-[//]: # ()
-[//]: # (```)
-
-</div>
-
 ### Стек технологий:
 ![HTML5](https://img.shields.io/badge/-HTML5-A9A9A9?style=for-the-badge&logo=HTML5)
 ![CSS3](https://img.shields.io/badge/-SCSS-4B0082?style=for-the-badge&logo=CSS3)
