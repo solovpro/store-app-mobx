@@ -1,18 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.8dbc1b60.css",
-    "main.js": "/static/js/main.fd3b9cf2.js",
-    "static/media/steak-house.png": "/static/media/steak-house.b92cc1e22a9f4e3c0200.png",
-    "static/media/AbhayaLibre-SemiBold.ttf": "/static/media/AbhayaLibre-SemiBold.48aaef083d682d8f28e1.ttf",
-    "static/media/Actor-Regular.ttf": "/static/media/Actor-Regular.15d692218d9ada8ff090.ttf",
-    "static/media/delete.png": "/static/media/delete.32b5b224f7087e8baba5.png",
-    "static/media/icon-app.png": "/static/media/icon-app.6ceec88f16a855799537.png",
-    "index.html": "/index.html",
-    "main.8dbc1b60.css.map": "/static/css/main.8dbc1b60.css.map",
-    "main.fd3b9cf2.js.map": "/static/js/main.fd3b9cf2.js.map"
+    "main.css": "/store-app/static/css/main.ed72fc69.css",
+    "main.js": "/store-app/static/js/main.5dc4e72a.js",
+    "static/media/product-5.png": "/store-app/static/media/product-5.ac298c7a07bde26ad747.png",
+    "static/media/product-6.png": "/store-app/static/media/product-6.259e4d4a88eda6762689.png",
+    "static/media/product-10.png": "/store-app/static/media/product-10.bef52ccf00166665b3ef.png",
+    "static/media/product-4.png": "/store-app/static/media/product-4.37bb1b84b3b9d0a52540.png",
+    "static/media/product-9.png": "/store-app/static/media/product-9.d2ab5d7e5f716aa75bda.png",
+    "static/media/product-2.png": "/store-app/static/media/product-2.fd911bca7448591fb6f7.png",
+    "static/media/product-1.png": "/store-app/static/media/product-1.b92cc1e22a9f4e3c0200.png",
+    "static/media/product-7.png": "/store-app/static/media/product-7.02fe5b7f85e3c177d58c.png",
+    "static/media/AbhayaLibre-SemiBold.ttf": "/store-app/static/media/AbhayaLibre-SemiBold.48aaef083d682d8f28e1.ttf",
+    "static/media/product-3.png": "/store-app/static/media/product-3.ed4a7b0beb6a0ab63124.png",
+    "static/media/product-8.png": "/store-app/static/media/product-8.eafe279321f292de8e12.png",
+    "static/media/Actor-Regular.ttf": "/store-app/static/media/Actor-Regular.15d692218d9ada8ff090.ttf",
+    "static/media/delete.png": "/store-app/static/media/delete.32b5b224f7087e8baba5.png",
+    "static/media/icon-app.png": "/store-app/static/media/icon-app.1d133d7bd9051899463c.png",
+    "index.html": "/store-app/index.html",
+    "main.ed72fc69.css.map": "/store-app/static/css/main.ed72fc69.css.map",
+    "main.5dc4e72a.js.map": "/store-app/static/js/main.5dc4e72a.js.map"
   },
   "entrypoints": [
-    "static/css/main.8dbc1b60.css",
-    "static/js/main.fd3b9cf2.js"
+    "static/css/main.ed72fc69.css",
+    "static/js/main.5dc4e72a.js"
   ]
 }
