@@ -14,7 +14,7 @@ const Received: React.FC<ReceivedProps> = ({ clearCart }) => {
          <div className={s.container} />
          <div className={s.receivedContent}>
             <div>Заказ принят!</div>
-            <Link to='/' onClick={clearCart}>
+            <Link to='/store-app/' onClick={clearCart}>
                <div className={s.receivedContent__Button}>Ok</div>
             </Link>
          </div>

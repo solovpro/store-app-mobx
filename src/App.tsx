@@ -22,8 +22,8 @@ const App: React.FC<AppProps> = inject('store')(
             {store?.data ? (
                <div className={s.appContent}>
                   <Routes>
-                     <Route path='/' element={<Order />} />
-                     <Route path='/cart' element={<Cart />} />
+                     <Route path='/store-app/' element={<Order />} />
+                     <Route path='/store-app/cart' element={<Cart />} />
                   </Routes>
                </div>
             ) : (
