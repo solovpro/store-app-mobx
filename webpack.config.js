@@ -11,19 +11,19 @@ module.exports = {
       clean: true, // очищать перед каждой сборкой
    },
    resolve: {
-      extensions: ['.js', '.jsx', '.css', '.scss'],
+      extensions: ['.js', '.jsx', 'ts', 'tsx', '.css', '.scss'],
    },
    module: {
       rules: [
          {
-            test: /\.js|\.jsx$/,
+            test: /\.js|\.jsx|\.ts|\.tsx$/,
             exclude: /node_modules/,
             loader: 'babel-loader',
          },
          {
             enforce: 'pre',
             exclude: /node_modules/,
-            test: /\.js$/,
+            test: /\.js$|\.ts/,
             loader: 'source-map-loader',
          },
          {
