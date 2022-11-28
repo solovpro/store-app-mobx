@@ -19,12 +19,16 @@ const App: React.FC<AppProps> = inject('store')(
          <main className={s.app}>
             <Header />
             {store?.isReceived && <Received clearCart={store?.clearCart} />}
-            <div className={s.appContent}>
-               <Routes>
-                  <Route path='/' element={<Order />} />
-                  <Route path='/cart' element={<Cart />} />
-               </Routes>
-            </div>
+            {store?.data ? (
+               <div className={s.appContent}>
+                  <Routes>
+                     <Route path='/' element={<Order />} />
+                     <Route path='/cart' element={<Cart />} />
+                  </Routes>
+               </div>
+            ) : (
+               <div>Произошла ошибка при получении данных</div>
+            )}
          </main>
       );
    })
