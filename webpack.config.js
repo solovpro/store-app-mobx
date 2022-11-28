@@ -6,7 +6,7 @@ module.exports = {
    entry: './src/index.tsx', // Точка входа в проект
    target: 'web',
    output: {
-      filename: 'todo-list.js',
+      filename: 'store-app.js',
       path: path.resolve(__dirname, 'build'), // путь вывода собранных файлов
       clean: true, // очищать перед каждой сборкой
    },
