@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-   entry: './src/index.js', // Точка входа в проект
+   entry: './src/index.tsx', // Точка входа в проект
    target: 'web',
    output: {
       filename: 'todo-list.js',
