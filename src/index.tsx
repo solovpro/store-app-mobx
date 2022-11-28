@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'mobx-react';
+import { BrowserRouter } from 'react-router-dom';
 
+import { MainStore } from './stores/MainStore';
 import App from './App';
 
 import './index.css';
 
+const store = MainStore.create();
+
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
-   <React.StrictMode>
-      <App />
-   </React.StrictMode>
+   <BrowserRouter>
+      <Provider store={store} history={history}>
+         <App />
+      </Provider>
+   </BrowserRouter>
 );
