@@ -5,6 +5,11 @@ import { data } from '../data/data';
 
 import product1 from '../assets/img/product-1.png';
 
+// РЕВЬЮ. Опасно сетить дефолтные значения для "значимых" полей сущности
+// Например для id. Например, может возникнуть ситуация что с сервера не пришло `id`
+// сущности, мы проставим 1, добавим в корзину и на сервер уйдет заказ с товаром 1
+// и если он есть, то он и придет клиенту. MST чем и хорош, он невалидную модель просто не добавит
+// в список и даже не разломается
 const dataModel = types.model('arrayEl', {
    id: types.optional(types.number, 1),
    img: types.optional(types.string, product1),
@@ -18,6 +23,11 @@ const dataModel = types.model('arrayEl', {
 export const MainStore = types
    .model('MainStore', {
       isReceived: types.optional(types.boolean, false), // Состояние окна об успешном заказе
+
+      // РЕВЬЮ. Если есть возможность рассчитать состояние из существующего лучше сделать так
+      // Тут нам в помощь `computed`, которые в MST реализуются через `views`
+      // Я часть написал внизу. Если это сделать, экшны заметно похудеют и станут более читаемыми.
+      // И вообще это сильно поменяет стор.
       isSelected: types.optional(types.boolean, false), // Есть ли выбранные товары
       countSelected: types.optional(types.number, 0), // Количество выбранных товаров
       sum: types.optional(types.number, 0), // Сумма выбранных товаров
@@ -130,4 +140,15 @@ export const MainStore = types
          this.isSelectedProducts();
          this.calculateSelected();
       },
+   }))
+   .views(self => ({
+      get countSelectedComputed() {
+         return self.data.reduce((count, item) => (item.selected ? (count += 1) : count), 0);
+      },
+
+      get hasSelectedComputed() {
+         return this.countSelectedComputed > 0;
+      },
+
+      //    и.т.д.
    }));

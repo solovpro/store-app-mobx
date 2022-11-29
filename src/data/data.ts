@@ -16,6 +16,7 @@ export const data: Array<Product> = [
       id: 1,
       img: product1,
       name: 'Товар1',
+      // РЕВЬЮ. Цена строчка, а в коде она везде приводится к числу.
       price: '50',
       selected: false,
       amount: 0,
