@@ -14,24 +14,22 @@ interface AppProps {
 }
 
 const App: React.FC<AppProps> = inject('store')(
-   observer(({ store = {} }: any) => {
-      return (
-         <main className={s.app}>
-            <Header />
-            {store?.isReceived && <Received clearCart={store?.clearCart} />}
-            {store?.data ? (
-               <div className={s.appContent}>
-                  <Routes>
-                     <Route path='/store-app/' element={<Order />} />
-                     <Route path='/store-app/cart' element={<Cart />} />
-                  </Routes>
-               </div>
-            ) : (
-               <div>Произошла ошибка при получении данных</div>
-            )}
-         </main>
-      );
-   })
+   observer(({ store = {} }: any) => (
+      <main className={s.app}>
+         <Header />
+         {store?.isReceived && <Received clearCart={store?.clearCart} />}
+         {store?.data ? (
+            <div className={s.appContent}>
+               <Routes>
+                  <Route path='/store-app/' element={<Order />} />
+                  <Route path='/store-app/cart' element={<Cart />} />
+               </Routes>
+            </div>
+         ) : (
+            <div>Произошла ошибка при получении данных</div>
+         )}
+      </main>
+   ))
 );
 
 export default App;

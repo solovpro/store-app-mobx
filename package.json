@@ -7,7 +7,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint --ext js,jsx src",
-    "predeploy": "npm run build",
+    "predeploy": "npm run buildy",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
