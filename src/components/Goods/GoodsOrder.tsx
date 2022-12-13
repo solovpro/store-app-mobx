@@ -20,7 +20,7 @@ const Goods: React.FC<ProductProps> = inject('store')(
          <div className={s.productName}>{product.name}</div>
          <img className={s.productImg} src={product.img} alt='' />
          <div className={s.productInfo}>
-            <div>{product.sum} &#8381;</div>
+            <div>{product.sum} Р</div>
             <div>{product.amount + ' шт.'}</div>
          </div>
          <div className={s.productEdit}>
