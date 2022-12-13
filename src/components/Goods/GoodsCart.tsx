@@ -20,7 +20,7 @@ const Goods: React.FC<ProductProps> = inject('store')(
          <div className={s.productEdit}>
             <div className={s.productInfo}>
                <div>Название: {product.name}</div>
-               <div>Цена: {product.price + '₽'}</div>
+               <div>Цена: {product.price} &#8381;</div>
                <div>Количество: {`${product.amount} шт.`}</div>
             </div>
             <div className={s.productEdit__InCart}>

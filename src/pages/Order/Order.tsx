@@ -36,7 +36,7 @@ const Order: React.FC<OrderProps> = inject('store')(
                         }
                      })}
                      <div className={s.orderGoods__Result}>
-                        <div className={s.cartResult}>Сумма заказа: {store.sumComputed} ₽</div>
+                        <div className={s.cartResult}>Сумма заказа: {store.sumComputed} &#8381;</div>
                      </div>
                   </>
                ) : (

@@ -18,7 +18,7 @@ const Goods: React.FC<ProductProps> = inject('store')(
          <div className={s.productName}>{product.name}</div>
          <img className={s.productImg} src={product.img} alt='' />
          <div className={s.productInfo}>
-            <div>{product.price + '₽'}</div>
+            <div>{product.price} &#8381;</div>
          </div>
          <button
             disabled={product.selected}
