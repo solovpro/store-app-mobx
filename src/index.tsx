@@ -1,21 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'mobx-react';
 import { BrowserRouter } from 'react-router-dom';
 
-import { MainStore } from './stores/MainStore';
+import { mainStore, StoreProvider } from './stores/main.store';
 import App from './App';
 
 import './index.css';
 
-const store = MainStore.create();
+const store = mainStore.create();
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
    <BrowserRouter>
-      <Provider store={store}>
+      <StoreProvider value={store}>
          <App />
-      </Provider>
+      </StoreProvider>
    </BrowserRouter>
 );

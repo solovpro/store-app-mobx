@@ -1,19 +1,17 @@
 import React, { ReactElement } from 'react';
-import { inject, observer } from 'mobx-react';
+import { observer } from 'mobx-react';
 import cn from 'classnames';
 
 import GoodsCart from '../../components/Goods/GoodsCart';
+import { useStore } from '../../stores/main.store';
 import { Product } from '../../types/types';
 
 import s from './Cart.module.scss';
 
-interface CartProps {
-   store?: any;
-}
-
 // Экран Корзины
-const Cart: React.FC<CartProps> = inject('store')(
-   observer(({ store }) => (
+const Cart: React.FC = observer(() => {
+   const store = useStore();
+   return (
       <div className={s.cart}>
          <div className={s.cartHeader}>Корзина</div>
          <>
@@ -42,7 +40,7 @@ const Cart: React.FC<CartProps> = inject('store')(
             </div>
          )}
       </div>
-   ))
-);
+   );
+});
 
 export default Cart;

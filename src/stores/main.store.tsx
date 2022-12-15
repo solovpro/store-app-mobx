@@ -1,9 +1,10 @@
-import { types } from 'mobx-state-tree';
+import React, { createContext } from 'react';
+import { types, Instance } from 'mobx-state-tree';
 
 import { Product } from '../types/types';
 import { data } from '../data/data';
 
-const dataModel = types.model('arrayEl', {
+const dataModel = types.model('dataEl', {
    id: types.number,
    img: types.string,
    name: types.string,
@@ -13,8 +14,8 @@ const dataModel = types.model('arrayEl', {
    sum: types.number,
 });
 
-export const MainStore = types
-   .model('MainStore', {
+export const mainStore = types
+   .model('mainStore', {
       isReceived: types.optional(types.boolean, false), // Состояние окна об успешном заказе
       data: types.optional(types.array(dataModel), data), // Данные о товарах
    })
@@ -98,3 +99,14 @@ export const MainStore = types
          });
       },
    }));
+
+export const RootStoreContext = createContext<null | Instance<typeof mainStore>>(null);
+export const StoreProvider = RootStoreContext.Provider;
+
+export function useStore() {
+   const store = React.useContext(RootStoreContext);
+   if (store === null) {
+      throw new Error('Store cannot be null, please add a context provider');
+   }
+   return store;
+}

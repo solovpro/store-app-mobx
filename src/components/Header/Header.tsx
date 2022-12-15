@@ -1,19 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { observer } from 'mobx-react';
+
+import { useStore } from '../../stores/main.store';
 
 import iconApp from '../../assets/img/icon-app.png';
 import cart from '../../assets/img/cart.png';
 
 import s from './Header.module.scss';
-import { inject, observer } from 'mobx-react';
-
-interface HeaderProps {
-   store?: any;
-}
 
 // Шапка сайта
-const Header: React.FC<HeaderProps> = inject('store')(
-   observer(({ store }) => (
+const Header: React.FC = observer(() => {
+   const store = useStore();
+   return (
       <div className={s.header}>
          <div className={s.headerContainer}>
             <div className={s.headerContent}>
@@ -34,13 +33,13 @@ const Header: React.FC<HeaderProps> = inject('store')(
                   <div className={s.headerInfo__CartSeparation} />
                   <div className={s.headerInfo__CartCount}>
                      <div className={s.headerInfo__CartCount_Text}>Выбранные товары:</div>
-                     <div className={s.headerInfo__CartCount_Number}>{store?.countSelectedComputed}</div>
+                     <div className={s.headerInfo__CartCount_Number}>{store.countSelectedComputed}</div>
                   </div>
                </div>
             </Link>
          </div>
       </div>
-   ))
-);
+   );
+});
 
 export default Header;

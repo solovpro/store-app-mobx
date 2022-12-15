@@ -1,19 +1,20 @@
 import React from 'react';
-import { inject, observer } from 'mobx-react';
+import { observer } from 'mobx-react';
 import cn from 'classnames';
 
+import { useStore } from '../../stores/main.store';
 import { Product } from '../../types/types';
 
 import s from './Goods.module.scss';
 
 interface ProductProps {
    product: Product;
-   store?: any;
 }
 
 // Товар
-const Goods: React.FC<ProductProps> = inject('store')(
-   observer(({ product = {}, store = {} }) => (
+const Goods: React.FC<ProductProps> = observer(({ product }) => {
+   const store = useStore();
+   return (
       <div className={cn(s.product, s.inProductsPanel)}>
          <div className={s.productName}>{product.name}</div>
          <img className={s.productImg} src={product.img} alt='' />
@@ -24,12 +25,12 @@ const Goods: React.FC<ProductProps> = inject('store')(
             disabled={product.selected}
             className={s.productButton}
             type='button'
-            onClick={() => store?.selectProduct(product)}
+            onClick={() => store.selectProduct(product)}
          >
             +
          </button>
       </div>
-   ))
-);
+   );
+});
 
 export default Goods;
