@@ -121,6 +121,9 @@
           width: 54px;
         }
         &_Text {
+          @media (max-width: 1024px) {
+            font-size: 17px;
+          }
           @media (max-width: 768px) {
             display: none;
           }
