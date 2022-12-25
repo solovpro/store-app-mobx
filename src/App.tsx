@@ -19,8 +19,8 @@ const App: React.FC = observer(() => {
          {store.data ? (
             <div className={s.appContent}>
                <Routes>
-                  <Route path='/store-app/' element={<Order />} />
-                  <Route path='/store-app/cart' element={<Cart />} />
+                  <Route path='/' element={<Order />} />
+                  <Route path='/cart' element={<Cart />} />
                </Routes>
             </div>
          ) : (
