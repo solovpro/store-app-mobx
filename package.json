@@ -2,7 +2,7 @@
   "name": "store-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://solovpro.github.io/store-app/",
+  "homepage": "https://solovpro.github.io/store-app-mobx/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
