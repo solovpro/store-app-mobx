@@ -13,7 +13,7 @@ interface ProductProps {
 }
 
 // Товар
-const Goods: React.FC<ProductProps> = observer(({ product }) => {
+const GoodsCart: React.FC<ProductProps> = observer(({ product }) => {
    const store = useStore();
    return (
       <div className={s.inCart}>
@@ -54,4 +54,4 @@ const Goods: React.FC<ProductProps> = observer(({ product }) => {
    );
 });
 
-export default Goods;
+export default GoodsCart;
