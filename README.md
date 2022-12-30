@@ -4,8 +4,8 @@
 
 ### Небольшой интернет магазин, реализованный с помощью Mobx-State-Tree
 
-[![Header](https://github.com/solovpro/store-app/raw/master/src/assets/img/app-page-order.png)](https://solovpro.github.io/store-app/)
-[![Header](https://github.com/solovpro/store-app/raw/master/src/assets/img/app-page-cart.png)](https://solovpro.github.io/store-app/)
+[![Header](https://github.com/solovpro/store-app/raw/master/src/assets/img/app-page-order.png)](https://solovpro.github.io/store-app-mobx/)
+[![Header](https://github.com/solovpro/store-app/raw/master/src/assets/img/app-page-cart.png)](https://solovpro.github.io/store-app-mobx/)
 
 ### Стек технологий:
 ![HTML5](https://img.shields.io/badge/-HTML5-A9A9A9?style=for-the-badge&logo=HTML5)
