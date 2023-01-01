@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/store-app-mobx/static/css/main.fe6346bb.css",
-    "main.js": "/store-app-mobx/static/js/main.1b22b997.js",
+    "main.js": "/store-app-mobx/static/js/main.0f402e37.js",
     "static/media/product-5.png": "/store-app-mobx/static/media/product-5.ac298c7a07bde26ad747.png",
     "static/media/product-6.png": "/store-app-mobx/static/media/product-6.259e4d4a88eda6762689.png",
     "static/media/product-10.png": "/store-app-mobx/static/media/product-10.bef52ccf00166665b3ef.png",
@@ -18,10 +18,10 @@
     "static/media/icon-app.png": "/store-app-mobx/static/media/icon-app.1d133d7bd9051899463c.png",
     "index.html": "/store-app-mobx/index.html",
     "main.fe6346bb.css.map": "/store-app-mobx/static/css/main.fe6346bb.css.map",
-    "main.1b22b997.js.map": "/store-app-mobx/static/js/main.1b22b997.js.map"
+    "main.0f402e37.js.map": "/store-app-mobx/static/js/main.0f402e37.js.map"
   },
   "entrypoints": [
     "static/css/main.fe6346bb.css",
-    "static/js/main.1b22b997.js"
+    "static/js/main.0f402e37.js"
   ]
 }
