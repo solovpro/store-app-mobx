@@ -62,6 +62,9 @@
   &Selected {
     width: 34%;
     border-left: 1px solid #E6E6E6;
+    @media (max-width: 1024px) {
+      width: 45%;
+    }
     @media (max-width: 768px) {
       width: 50%;
     }

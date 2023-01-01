@@ -33,9 +33,7 @@ const Order: React.FC = observer(() => {
                            return <GoodsOrder product={product} key={product.id} />;
                         }
                      })}
-                     <div className={s.orderGoods__Result}>
-                        <div className={s.cartResult}>Сумма заказа: {store.sumComputed} &#8381;</div>
-                     </div>
+                     <div className={s.orderGoods__Result}>Сумма заказа: {store.sumComputed} &#8381;</div>
                   </>
                ) : (
                   <div className={s.orderGoods__NotSelected}>Нет выбранных товаров</div>
