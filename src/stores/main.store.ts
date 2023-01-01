@@ -36,15 +36,6 @@ export const mainStore = types
       },
    }))
    .actions(self => ({
-      // Изменения массива данных
-      setDataContainer(product: Product, func: (dataEl: Product) => void): void {
-         self.data.forEach((dataEl: Product): void => {
-            if (dataEl.id === product.id) {
-               func(dataEl);
-            }
-         });
-      },
-
       // Очистить корзину
       clearCart(): void {
          self.data.forEach((dataEl: Product): void => {
@@ -63,28 +54,34 @@ export const mainStore = types
       // Добавить товар в заказ
       selectProduct(product: Product): void {
          if (!product.selected) {
-            this.setDataContainer(product, (dataEl: Product) => {
-               dataEl.selected = true;
-               dataEl.amount = 1;
-               dataEl.sum = dataEl.price;
+            self.data.forEach((dataEl: Product): void => {
+               if (dataEl.id === product.id) {
+                  dataEl.selected = true;
+                  dataEl.amount = 1;
+                  dataEl.sum = dataEl.price;
+               }
             });
          }
       },
 
       // Удалить товар из заказа или корзины
       deleteProduct(product: Product): void {
-         this.setDataContainer(product, (dataEl: Product) => {
-            dataEl.selected = false;
-            dataEl.amount = 0;
+         self.data.forEach((dataEl: Product): void => {
+            if (dataEl.id === product.id) {
+               dataEl.selected = false;
+               dataEl.amount = 0;
+            }
          });
       },
 
       // Уменьшить количество товара в заказе
       minusAmount(product: Product): void {
          if (product.amount !== 1) {
-            this.setDataContainer(product, (dataEl: Product) => {
-               dataEl.amount -= 1;
-               dataEl.sum -= dataEl.price;
+            self.data.forEach((dataEl: Product): void => {
+               if (dataEl.id === product.id) {
+                  dataEl.sum -= dataEl.price;
+                  dataEl.amount -= 1;
+               }
             });
          } else {
             this.deleteProduct(product);
@@ -93,9 +90,11 @@ export const mainStore = types
 
       // Увеличить количество товара в заказе
       plusAmount(product: Product): void {
-         this.setDataContainer(product, (dataEl: Product) => {
-            dataEl.amount += 1;
-            dataEl.sum += dataEl.price;
+         self.data.forEach((dataEl: Product): void => {
+            if (dataEl.id === product.id) {
+               dataEl.sum += dataEl.price;
+               dataEl.amount += 1;
+            }
          });
       },
    }));
