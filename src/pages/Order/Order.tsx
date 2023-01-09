@@ -26,7 +26,7 @@ const Order: React.FC = observer(() => {
          </article>
          <div className={s.orderSeparation} />
          <aside className={cn(s.orderSelected, s.orderBlock)}>
-            <p className={s.orderBlock__Header}>Заказ</p>
+            <h1 className={s.orderBlock__Header}>Заказ</h1>
             <div className={s.orderGoods}>
                {store.hasSelectedComputed ? (
                   <ul>

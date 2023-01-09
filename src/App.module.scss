@@ -1,9 +1,7 @@
 .app {
-  &Content {
     margin: 65px 0 0 0;
     animation-name: appear;
     animation-duration: 0.8s;
-  }
 }
 
 @keyframes appear {
