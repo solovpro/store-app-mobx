@@ -16,13 +16,13 @@ interface ProductProps {
 const GoodsCart: React.FC<ProductProps> = observer(({ product }) => {
    const store = useStore();
    return (
-      <div className={s.inCart}>
+      <article className={s.inCart}>
          <img className={s.productImg} src={product.img} alt='' />
          <div className={s.productEdit}>
             <div className={s.productInfo}>
-               <div>Название: {product.name}</div>
-               <div>Цена: {product.price} Р</div>
-               <div>Количество: {`${product.amount} шт.`}</div>
+               <p>Название: {product.name}</p>
+               <p>Цена: {product.price} Р</p>
+               <p>Количество: {`${product.amount} шт.`}</p>
             </div>
             <div className={s.productEdit__InCart}>
                <button className={s.productEdit__Delete} onClick={() => store.deleteProduct(product)}>
@@ -50,7 +50,7 @@ const GoodsCart: React.FC<ProductProps> = observer(({ product }) => {
                </div>
             </div>
          </div>
-      </div>
+      </article>
    );
 });
 

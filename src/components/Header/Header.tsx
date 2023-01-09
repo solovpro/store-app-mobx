@@ -13,18 +13,16 @@ import s from './Header.module.scss';
 const Header: React.FC = observer(() => {
    const store = useStore();
    return (
-      <div className={s.header}>
-         <div className={s.headerContainer}>
-            <div className={s.headerContent}>
-               <Link to='/'>
+      <header className={s.header}>
+         <nav className={s.headerContainer}>
+            <Link to='/'>
+               <div className={s.headerContent}>
                   <div className={s.headerContent__Icon}>
                      <img src={iconApp} alt='' width='30px' height='30px' />
                   </div>
-               </Link>
-               <Link to='/'>
-                  <div className={s.headerContent__Name}>Store app</div>
-               </Link>
-            </div>
+                  <p className={s.headerContent__Name}>Store app</p>
+               </div>
+            </Link>
             <Link className={s.headerInfo} to='/cart'>
                <div className={s.headerInfo__Cart}>
                   <div className={s.headerInfo__CartImage}>
@@ -32,13 +30,13 @@ const Header: React.FC = observer(() => {
                   </div>
                   <div className={s.headerInfo__CartSeparation} />
                   <div className={s.headerInfo__CartCount}>
-                     <div className={s.headerInfo__CartCount_Text}>Выбранные товары:</div>
+                     <p className={s.headerInfo__CartCount_Text}>Выбранные товары:</p>
                      <div className={s.headerInfo__CartCount_Number}>{store.countSelectedComputed}</div>
                   </div>
                </div>
             </Link>
-         </div>
-      </div>
+         </nav>
+      </header>
    );
 });
 

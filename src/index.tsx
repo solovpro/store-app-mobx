@@ -5,7 +5,7 @@ import { HashRouter } from 'react-router-dom';
 import { mainStore, StoreProvider } from './stores/main.store';
 import App from './App';
 
-import './index.css';
+import './index.scss';
 
 const store = mainStore.create();
 

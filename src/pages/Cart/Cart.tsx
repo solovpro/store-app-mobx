@@ -12,23 +12,27 @@ import s from './Cart.module.scss';
 const Cart: React.FC = observer(() => {
    const store = useStore();
    return (
-      <div className={s.cart}>
-         <div className={s.cartHeader}>Корзина</div>
-         <>
+      <section className={s.cart}>
+         <h1 className={s.cartHeader}>Корзина</h1>
+         <ul>
             {store?.data?.map((product: Product): ReactElement | undefined => {
                if (product.selected) {
-                  return <GoodsCart product={product} key={product.id} />;
+                  return (
+                     <li>
+                        <GoodsCart product={product} key={product.id} />
+                     </li>
+                  );
                }
             })}
-            {!store?.hasSelectedComputed && <div className={s.cartNotSelected}>Нет выбранных товаров</div>}
-         </>
+            {!store?.hasSelectedComputed && <span className={s.cartNotSelected}>Нет выбранных товаров</span>}
+         </ul>
          {store?.hasSelectedComputed && (
             <div className={s.cartButtons}>
                <button className={cn(s.cartButton, s.cartButtons__Clear)} type='button' onClick={store.clearCart}>
                   Очистить корзину
                </button>
                <div className={s.cartButtons__Result}>
-                  <div className={s.cartButtons__ResultSum}>Сумма заказа: {store.sumComputed} ₽</div>
+                  <h2 className={s.cartButtons__ResultSum}>Сумма заказа: {store.sumComputed} ₽</h2>
                   <button
                      className={cn(s.cartButton, s.cartButtons__Order)}
                      type='button'
@@ -39,7 +43,7 @@ const Cart: React.FC = observer(() => {
                </div>
             </div>
          )}
-      </div>
+      </section>
    );
 });
 

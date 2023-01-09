@@ -17,12 +17,12 @@ interface ProductProps {
 const GoodsOrder: React.FC<ProductProps> = observer(({ product }) => {
    const store = useStore();
    return (
-      <div className={cn(s.product, s.inOrder)}>
-         <div className={s.productName}>{product.name}</div>
+      <article className={cn(s.product, s.inOrder)}>
+         <p className={s.productName}>{product.name}</p>
          <img className={s.productImg} src={product.img} alt='' />
          <div className={s.productInfo}>
-            <div>{product.sum} Р</div>
-            <div>{product.amount + ' шт.'}</div>
+            <p>{product.sum} Р</p>
+            <p>{product.amount + ' шт.'}</p>
          </div>
          <div className={s.productEdit}>
             <div className={s.productEdit_InOrder}>
@@ -51,7 +51,7 @@ const GoodsOrder: React.FC<ProductProps> = observer(({ product }) => {
                </div>
             </div>
          </div>
-      </div>
+      </article>
    );
 });
 

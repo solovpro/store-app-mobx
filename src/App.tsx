@@ -13,20 +13,20 @@ import s from './App.module.scss';
 const App: React.FC = observer(() => {
    const store = useStore();
    return (
-      <main className={s.app}>
+      <>
          <Header />
          {store.isReceived && <Received clearCart={store.clearCart} />}
          {store.data ? (
-            <div className={s.appContent}>
+            <main className={s.app}>
                <Routes>
                   <Route path='/' element={<Order />} />
                   <Route path='/cart' element={<Cart />} />
                </Routes>
-            </div>
+            </main>
          ) : (
-            <div>Произошла ошибка при получении данных</div>
+            <h1>Произошла ошибка при получении данных</h1>
          )}
-      </main>
+      </>
    );
 });
 

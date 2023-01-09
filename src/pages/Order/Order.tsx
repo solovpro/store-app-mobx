@@ -13,34 +13,40 @@ import s from './Order.module.scss';
 const Order: React.FC = observer(() => {
    const store = useStore();
    return (
-      <div className={s.order}>
-         <div className={cn(s.orderProducts, s.orderBlock)}>
-            <div className={s.orderBlock__Header}>Товары</div>
-            <div className={s.orderGoods}>
+      <section className={s.order}>
+         <article className={cn(s.orderProducts, s.orderBlock)}>
+            <h1 className={s.orderBlock__Header}>Товары</h1>
+            <ul className={s.orderGoods}>
                {store.data.map((product: Product): ReactElement | undefined => (
-                  <GoodsPanel product={product} key={product.id} />
+                  <li>
+                     <GoodsPanel product={product} key={product.id} />
+                  </li>
                ))}
-            </div>
-         </div>
+            </ul>
+         </article>
          <div className={s.orderSeparation} />
-         <div className={cn(s.orderSelected, s.orderBlock)}>
-            <div className={s.orderBlock__Header}>Заказ</div>
+         <aside className={cn(s.orderSelected, s.orderBlock)}>
+            <p className={s.orderBlock__Header}>Заказ</p>
             <div className={s.orderGoods}>
                {store.hasSelectedComputed ? (
-                  <>
+                  <ul>
                      {store.data.map((product: Product): ReactElement | undefined => {
                         if (product.selected) {
-                           return <GoodsOrder product={product} key={product.id} />;
+                           return (
+                              <li>
+                                 <GoodsOrder product={product} key={product.id} />
+                              </li>
+                           );
                         }
                      })}
-                     <div className={s.orderGoods__Result}>Сумма заказа: {store.sumComputed} &#8381;</div>
-                  </>
+                     <p className={s.orderGoods__Result}>Сумма заказа: {store.sumComputed} &#8381;</p>
+                  </ul>
                ) : (
-                  <div className={s.orderGoods__NotSelected}>Нет выбранных товаров</div>
+                  <p className={s.orderGoods__NotSelected}>Нет выбранных товаров</p>
                )}
             </div>
-         </div>
-      </div>
+         </aside>
+      </section>
    );
 });
 

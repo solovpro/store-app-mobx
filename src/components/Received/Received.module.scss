@@ -12,7 +12,7 @@
     left: 0;
     background-color: #000;
     opacity: .6;
-    animation-name: appearanceContainer;
+    animation-name: appearContainer;
     animation-duration: 3s;
     z-index: 3;
   }
@@ -29,7 +29,7 @@
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%);
-    animation-name: appearanceContent;
+    animation-name: appearContent;
     animation-duration: 0.8s;
     border: 3px solid #555;
     font-size: 29px;
@@ -68,7 +68,7 @@
   }
 }
 
-@keyframes appearanceContent {
+@keyframes appearContent {
   0% {
     opacity: 0;
     margin: -300px 0 0 0;
@@ -79,7 +79,7 @@
   }
 }
 
-@keyframes appearanceContainer {
+@keyframes appearContainer {
   0% {
     opacity: 0;
   }

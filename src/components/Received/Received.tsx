@@ -10,15 +10,15 @@ interface ReceivedProps {
 // Окно об успешном заказе
 const Received: React.FC<ReceivedProps> = ({ clearCart }) => {
    return (
-      <div className={s.received}>
+      <article className={s.received}>
          <div className={s.container} />
          <div className={s.receivedContent}>
-            <div>Заказ принят!</div>
+            <h2>Заказ принят!</h2>
             <Link to='/' onClick={clearCart}>
-               <div className={s.receivedContent__Button}>Ok</div>
+               <button className={s.receivedContent__Button}>Ok</button>
             </Link>
          </div>
-      </div>
+      </article>
    );
 };
 
