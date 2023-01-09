@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/store-app-mobx/static/css/main.7674da09.css",
-    "main.js": "/store-app-mobx/static/js/main.bd6ab85b.js",
+    "main.css": "/store-app-mobx/static/css/main.e7b3b096.css",
+    "main.js": "/store-app-mobx/static/js/main.89614b72.js",
     "static/media/product-5.png": "/store-app-mobx/static/media/product-5.ac298c7a07bde26ad747.png",
     "static/media/product-6.png": "/store-app-mobx/static/media/product-6.259e4d4a88eda6762689.png",
     "static/media/product-10.png": "/store-app-mobx/static/media/product-10.bef52ccf00166665b3ef.png",
@@ -17,11 +17,11 @@
     "static/media/delete.png": "/store-app-mobx/static/media/delete.32b5b224f7087e8baba5.png",
     "static/media/icon-app.png": "/store-app-mobx/static/media/icon-app.1d133d7bd9051899463c.png",
     "index.html": "/store-app-mobx/index.html",
-    "main.7674da09.css.map": "/store-app-mobx/static/css/main.7674da09.css.map",
-    "main.bd6ab85b.js.map": "/store-app-mobx/static/js/main.bd6ab85b.js.map"
+    "main.e7b3b096.css.map": "/store-app-mobx/static/css/main.e7b3b096.css.map",
+    "main.89614b72.js.map": "/store-app-mobx/static/js/main.89614b72.js.map"
   },
   "entrypoints": [
-    "static/css/main.7674da09.css",
-    "static/js/main.bd6ab85b.js"
+    "static/css/main.e7b3b096.css",
+    "static/js/main.89614b72.js"
   ]
 }
