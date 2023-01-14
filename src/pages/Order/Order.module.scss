@@ -2,9 +2,7 @@
   display: flex;
   z-index: 1;
 
-  &Block {
-    margin: 0 20px;
-
+  &Products {
     &__Header {
       display: flex;
       justify-content: center;
@@ -12,64 +10,134 @@
       font-size: 40px;
       color: #019Aff;
     }
-  }
 
-  &Products {
-    width: 65%;
-    @media (max-width: 768px) {
-      width: 50%;
-    }
-    @media (max-width: 550px) {
+    &__widthBig {
       width: 100%;
     }
-  }
 
-  &Goods {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: wrap;
-    margin: 20px 0 0 0;
-    &__Result {
-      width: 100%;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      font-size: 30px;
-      padding: 20px 0 0 20px;
-      color: #333;
-      @media (max-width: 768px) {
-        font-size: 22px;
+    &__widthSmall {
+      width: 70%;
+      @media (max-width: 1024px) {
+        width: 65%;
       }
     }
-    &__NotSelected {
+
+    &__Goods {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 25px;
-      color: #9C0000;
-      margin: 50px 0 0 0;
-      @media (max-width: 1024px) {
-        font-size: 20px;
+      flex-flow: wrap;
+      margin: 20px 0 0 0;
+      &__Result {
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: 30px;
+        padding: 20px 0 0 20px;
+        color: #333;
+        @media (max-width: 768px) {
+          font-size: 22px;
+        }
       }
-      @media (max-width: 768px) {
-        font-size: 20px;
-        margin: 50px 0 0 15px;
+      &__NotSelected {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        color: #9C0000;
+        margin: 50px 0 0 0;
+        @media (max-width: 1024px) {
+          font-size: 20px;
+        }
+        @media (max-width: 768px) {
+          font-size: 20px;
+          margin: 50px 0 0 15px;
+        }
+      }
+    }
+  }
+}
+
+.aside {
+  width: 100px;
+
+  &Text {
+    margin: 20px;
+    font-size: 16px;
+  }
+
+  &Arrow {
+    position: relative;
+    cursor: pointer;
+    margin: 30px 0 0 0;
+    width: 66px;
+    height: 30px;
+    display: flex;
+    transform: rotate(270deg);
+
+    &__Left {
+      position: absolute;
+      background-color: transparent;
+      top: 10px;
+      left: 0;
+      width: 40px;
+      height: 10px;
+      display: block;
+      transform: rotate(35deg);
+      float: right;
+      border-radius: 2px;
+
+      &Open:after {
+        transform-origin: center center;
+        transform: rotate(-70deg);
+      }
+
+      &:after {
+        content: "";
+        background-color: #019Aff;
+        width: 40px;
+        height: 10px;
+        display: block;
+        float: right;
+        border-radius: 6px 10px 10px 6px;
+        transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+        z-index: -1;
+      }
+    }
+
+    &__Right {
+      position: absolute;
+      background-color: transparent;
+      top: 10px;
+      left: 26px;
+      width: 40px;
+      height: 10px;
+      display: block;
+      transform: rotate(-35deg);
+      float: right;
+      border-radius: 2px;
+
+      &Open:after {
+        transform-origin: center center;
+        transform: rotate(70deg);
+      }
+
+      &:after {
+        content: "";
+        background-color: #019Aff;
+        width: 40px;
+        height: 10px;
+        display: block;
+        float: right;
+        border-radius: 10px 6px 6px 10px;
+        transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+        z-index: -1;
       }
     }
   }
 
-  &Selected {
-    width: 34%;
-    border-left: 1px solid #E6E6E6;
-    @media (max-width: 1024px) {
-      width: 45%;
-    }
-    @media (max-width: 768px) {
-      width: 50%;
-    }
-    @media (max-width: 550px) {
-      display: none;
-    }
+  @media (max-width: 768px) {
+    display: none;
   }
 }

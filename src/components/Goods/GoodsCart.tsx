@@ -21,7 +21,7 @@ const GoodsCart: React.FC<ProductProps> = observer(({ product }) => {
          <div className={s.productEdit}>
             <div className={s.productInfo}>
                <p>Название: {product.name}</p>
-               <p>Цена: {product.price} Р</p>
+               <p>Цена: {product.price} р</p>
                <p>Количество: {`${product.amount} шт.`}</p>
             </div>
             <div className={s.productEdit__InCart}>

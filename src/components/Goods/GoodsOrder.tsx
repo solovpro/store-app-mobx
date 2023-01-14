@@ -21,7 +21,7 @@ const GoodsOrder: React.FC<ProductProps> = observer(({ product }) => {
          <p className={s.productName}>{product.name}</p>
          <img className={s.productImg} src={product.img} alt='' />
          <div className={s.productInfo}>
-            <p>{product.sum} Р</p>
+            <p>{product.sum} р</p>
             <p>{product.amount + ' шт.'}</p>
          </div>
          <div className={s.productEdit}>

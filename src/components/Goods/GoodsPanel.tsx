@@ -19,7 +19,7 @@ const GoodsPanel: React.FC<ProductProps> = observer(({ product }) => {
          <p className={s.productName}>{product.name}</p>
          <img className={s.productImg} src={product.img} alt='' />
          <div className={s.productInfo}>
-            <p>{product.price} Р</p>
+            <p>{product.price} р</p>
          </div>
          <button
             disabled={product.selected}
@@ -27,7 +27,7 @@ const GoodsPanel: React.FC<ProductProps> = observer(({ product }) => {
             type='button'
             onClick={() => store.selectProduct(product)}
          >
-            +
+            {product.selected ? 'Добавлено' : 'Добавить в корзину'}
          </button>
       </article>
    );

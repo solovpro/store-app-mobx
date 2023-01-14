@@ -15,16 +15,19 @@ const Cart: React.FC = observer(() => {
       <section className={s.cart}>
          <h1 className={s.cartHeader}>Корзина</h1>
          <ul>
-            {store?.data?.map((product: Product): ReactElement | undefined => {
-               if (product.selected) {
-                  return (
-                     <li>
-                        <GoodsCart product={product} key={product.id} />
-                     </li>
-                  );
-               }
-            })}
-            {!store?.hasSelectedComputed && <span className={s.cartNotSelected}>Нет выбранных товаров</span>}
+            {store.hasSelectedComputed ? (
+               store?.data?.map((product: Product): ReactElement | undefined => {
+                  if (product.selected) {
+                     return (
+                        <li key={product.id}>
+                           <GoodsCart product={product} />
+                        </li>
+                     );
+                  }
+               })
+            ) : (
+               <span className={s.cartNotSelected}>Нет выбранных товаров</span>
+            )}
          </ul>
          {store?.hasSelectedComputed && (
             <div className={s.cartButtons}>
@@ -32,7 +35,7 @@ const Cart: React.FC = observer(() => {
                   Очистить корзину
                </button>
                <div className={s.cartButtons__Result}>
-                  <h2 className={s.cartButtons__ResultSum}>Сумма заказа: {store.sumComputed} ₽</h2>
+                  <h2 className={s.cartButtons__ResultSum}>Сумма заказа: {store.sumComputed} р</h2>
                   <button
                      className={cn(s.cartButton, s.cartButtons__Order)}
                      type='button'

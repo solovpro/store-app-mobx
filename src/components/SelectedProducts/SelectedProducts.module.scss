@@ -1,0 +1,67 @@
+.selectedProducts {
+  width: 30%;
+  border-left: 1px solid #E6E6E6;
+  animation-name: appear;
+  animation-duration: 1s;
+
+  &__Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #019Aff;
+  }
+
+  &__Goods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    margin: 20px 0 0 0;
+
+    &Result {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      font-size: 30px;
+      padding: 20px 0 0 0;
+      color: #333;
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+
+    &NotSelected {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 25px;
+      color: #9C0000;
+      margin: 50px 0 0 0;
+      @media (max-width: 1024px) {
+        font-size: 20px;
+      }
+      @media (max-width: 768px) {
+        font-size: 20px;
+        margin: 50px 0 0 15px;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 35%;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
