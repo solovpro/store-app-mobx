@@ -1,0 +1,125 @@
+input[type='checkbox'] {
+  margin: 0;
+}
+
+.inputCheckbox {
+  width: 21px;
+  height: 21px;
+  background: #F2F9FF;
+  border: 1px solid #8CC0F0;
+  border-radius: 3px;
+  cursor: pointer;
+  &__Container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 15px 0 0 0;
+  }
+
+  &__Title {
+    color: #505050;
+    margin: 0 0 0 7px;
+  }
+}
+
+.inputHeader__Password {
+  display: flex;
+  justify-content: space-between;
+
+  &Name {
+
+  }
+
+  &Recovery {
+    color: #1458D6;
+    cursor: pointer;
+  }
+}
+
+.inputContainer {
+  margin: 0 0 20px 0;
+  .inputHeader {
+    font-size: 16px;
+    color: #505050;
+    margin: 0 0 10px 0;
+  }
+
+  .input {
+    width: calc(100% - 20px);
+    height: 35px;
+    border: 1px solid #B1C0CE;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 18px;
+
+    &:focus {
+      border: 1px solid #F4A801;
+      box-shadow: 0 5px 9px rgba(240, 162, 23, 0.07), 0px 4px 15px rgba(248, 200, 96, 0.14);
+    }
+  }
+}
+
+.buttonBackground {
+  width: 100%;
+  height: 60px;
+  background: #1458D6;
+  color: #FFF;
+  border-radius: 5px;
+  margin: 0 0 30px 0;
+  cursor: pointer;
+}
+
+.buttonTransparent {
+  color: #1458D6;
+  cursor: pointer;
+}
+
+.form {
+  width: 300px;
+  margin: 64px 0 0 0;
+  &Header {
+    font-weight: 700;
+    font-size: 36px;
+    margin: 0 0 25px 0;
+  }
+  &Content {
+
+    &__Inputs {
+      margin: 0 0 40px 0;
+      &Block {
+
+        &Header {
+
+        }
+        &Input {
+
+        }
+      }
+    }
+
+    &__Buttons {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+}
+
+.entryHelp {
+  margin: 73px 0 0 0;
+  &__Header {
+    font-size: 16px;
+    color: #505050;
+  }
+  &__Icons {
+    display: flex;
+    margin: 32px 0 0 0;
+    &Icon {
+      margin: 0 0 0 42px;
+      cursor: pointer;
+      &_First {
+        margin: 0;
+      }
+    }
+  }
+}

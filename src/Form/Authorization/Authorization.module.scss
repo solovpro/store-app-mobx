@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  margin: 40px 166px 0;
+  .form {
+    width: 550px;
+  }
+  .aside {
+    display: flex;
+    flex-flow: column;
+    margin: 170px 0 0 128px;
+    &Header {
+      font-family: 'Inter', serif;
+      font-size: 36px;
+      line-height: 44px;
+      font-weight: 700;
+      text-align: center;
+      color: #111111;
+    }
+    &Price {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      margin: 18px 0 0 0;
+    }
+    &Icons {
+      display: flex;
+      margin: 58px 0 0 0;
+      &__Item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        margin: 0 0 0 24px;
+        &Text {
+          width: 108px;
+          font-size: 14px;
+          margin: 16px 0 0 0;
+          font-weight: 400;
+        }
+        &First {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
